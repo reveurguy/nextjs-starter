@@ -5,17 +5,20 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\"",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\"",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "prepare": "husky install",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "typecheck": "tsc --noEmit"
   },
-    "lint-staged": {
-      "*.{jsx,js,ts,tsx}": ["npm run format:write", "eslint --fix"]
+  "lint-staged": {
+    "*.{jsx,js,ts,tsx}": [
+      "npm run format:write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
