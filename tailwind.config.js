@@ -31,8 +31,8 @@ module.exports = {
     },
   },
   plugins: [
-    require("@headlessui/tailwindcss"),
     require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
   ],
 }
