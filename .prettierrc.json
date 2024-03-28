@@ -5,7 +5,8 @@
   "singleQuote": true,
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-organize-imports"
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss"
   ],
   "bracketSameLine": true,
   "bracketSpacing": true
