@@ -14,6 +14,16 @@
       {
         "endOfLine": "auto"
       }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-var": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
     ]
   },
   "root": true
