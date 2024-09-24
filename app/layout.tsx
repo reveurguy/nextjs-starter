@@ -2,6 +2,7 @@ import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,6 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {(process.env.NODE_ENV === 'development' ||
+          process.env.VERCEL_ENV === 'preview') && (
+          // eslint-disable-next-line @next/next/no-sync-scripts
+          <Script
+            data-recording-token={process.env.METICULOUS_TOKEN}
+            data-is-production-environment="false"
+            src="https://snippet.meticulous.ai/v1/meticulous.js"
+          />
+        )}
+      </head>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
