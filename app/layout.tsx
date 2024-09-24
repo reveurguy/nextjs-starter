@@ -21,7 +21,7 @@ export default function RootLayout({
           process.env.VERCEL_ENV === 'preview') && (
           // eslint-disable-next-line @next/next/no-sync-scripts
           <Script
-            data-recording-token="CW8dkYJx98FvI5eN2Qbn328XLPX9PRjF2CyIqmVJ"
+            data-recording-token={process.env.METICULOUS_TOKEN}
             data-is-production-environment="false"
             src="https://snippet.meticulous.ai/v1/meticulous.js"
           />
