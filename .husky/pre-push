@@ -1,0 +1,6 @@
+bun flt
+
+if [ $? -ne 0 ]; then
+  echo "Errors found. Please fix them before pushing."
+  exit 1
+fi
