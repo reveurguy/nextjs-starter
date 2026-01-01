@@ -2,6 +2,7 @@ import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import React from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +20,6 @@ export default function RootLayout({
       <head>
         {(process.env.NODE_ENV === 'development' ||
           process.env.VERCEL_ENV === 'preview') && (
-          // eslint-disable-next-line @next/next/no-sync-scripts
           <Script
             data-recording-token={process.env.METICULOUS_TOKEN}
             data-is-production-environment="false"
