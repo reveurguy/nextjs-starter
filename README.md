@@ -1,4 +1,4 @@
-## **Getting Started**
+## Getting Started
 
 First install the required packages by running:
 
